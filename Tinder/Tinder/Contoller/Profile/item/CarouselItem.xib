@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselItem" customModule="Tinder" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="llm-PU-4cm" id="MfM-x1-4Li"/>
+                <outlet property="lblSubTitle" destination="RhN-7K-ouS" id="hIP-JL-jkx"/>
+                <outlet property="lblTitle" destination="SnX-Qw-vqN" id="JWJ-9E-kUO"/>
+                <outlet property="vwBackground" destination="fGr-ga-GgY" id="CMb-0W-Sxu"/>
+                <outlet property="vwContent" destination="iN0-l3-epB" id="oMo-V9-jkv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="429"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGr-ga-GgY">
+                    <rect key="frame" x="0.0" y="0.0" width="423" height="429"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ojC-lw-u10">
+                            <rect key="frame" x="20" y="236.5" width="383" height="42"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="J4G-pa-P4n">
+                                    <rect key="frame" x="85" y="0.0" width="213.5" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.open.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="llm-PU-4cm">
+                                            <rect key="frame" x="0.0" y="0.5" width="20.5" height="18.5"/>
+                                            <color key="tintColor" red="0.98039215690000003" green="0.7843137255" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will be the heading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-Qw-vqN">
+                                            <rect key="frame" x="35.5" y="0.0" width="178" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" name="headingColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What will happen if text size is long." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhN-7K-ouS">
+                                    <rect key="frame" x="73.5" y="25" width="236.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <color key="textColor" name="headingColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ojC-lw-u10" secondAttribute="trailing" constant="20" id="Agh-Wn-Kfs"/>
+                        <constraint firstItem="ojC-lw-u10" firstAttribute="leading" secondItem="fGr-ga-GgY" secondAttribute="leading" constant="20" id="Btb-mp-KNO"/>
+                        <constraint firstItem="ojC-lw-u10" firstAttribute="centerX" secondItem="fGr-ga-GgY" secondAttribute="centerX" id="FUZ-fD-ERb"/>
+                        <constraint firstItem="ojC-lw-u10" firstAttribute="centerY" secondItem="fGr-ga-GgY" secondAttribute="centerY" multiplier="1.2" id="UWT-VY-DTa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fGr-ga-GgY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="58e-u8-2GY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fGr-ga-GgY" secondAttribute="bottom" id="JyM-Ua-xCQ"/>
+                <constraint firstItem="fGr-ga-GgY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uus-8s-Dd9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fGr-ga-GgY" secondAttribute="trailing" id="nfd-yk-nYb"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="215.19999999999999" y="-145.27736131934034"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lock.open.fill" catalog="system" width="64" height="56"/>
+        <namedColor name="headingColor">
+            <color red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
