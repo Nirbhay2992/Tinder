@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2AAEED255F918F00CAACF1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */; };
 		74E65E325C4CA031374DE494 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */; };
 		C317014B24E6434300922F2E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014A24E6434300922F2E /* ViewExtension.swift */; };
 		C317014D24E6490C00922F2E /* Constant2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014C24E6490C00922F2E /* Constant2.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1813A28CBBF5A2D14BA548B7 /* Pods-Tinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder.release.xcconfig"; path = "Target Support Files/Pods-Tinder/Pods-Tinder.release.xcconfig"; sourceTree = "<group>"; };
+		1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317014A24E6434300922F2E /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		C317014C24E6490C00922F2E /* Constant2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant2.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C2AAEEB255F917B00CAACF1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		3BBD1AECF875CFAF9AA7CB52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		C3B125D624E42E910011EDE7 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				1C2AAEEB255F917B00CAACF1 /* Common */,
 				C34F68E924E56857008E2355 /* Contoller */,
 				C34F68E124E4FF8B008E2355 /* Model */,
 				C3B125F624E4326F0011EDE7 /* Extension */,
@@ -413,6 +424,7 @@
 				C317015D24E7C82200922F2E /* CarouselItem.swift in Sources */,
 				C317015824E7C6F200922F2E /* ProfilePageViewController.swift in Sources */,
 				C3B125DA24E42E910011EDE7 /* SceneDelegate.swift in Sources */,
+				1C2AAEED255F918F00CAACF1 /* LocationManager.swift in Sources */,
 				C317015224E6926700922F2E /* ProfileViewController.swift in Sources */,
 				C3B125F524E431C60011EDE7 /* LoginViewModel.swift in Sources */,
 				C317014B24E6434300922F2E /* ViewExtension.swift in Sources */,
