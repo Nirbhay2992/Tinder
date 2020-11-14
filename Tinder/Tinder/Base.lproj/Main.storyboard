@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e77-Cs-3Af">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QsE-HH-85X">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -877,6 +877,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Instruction" id="Bl0-OF-itC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="smz-jE-gl3"/>
                         <barButtonItem key="leftBarButtonItem" image="backButtonIcon" id="5qB-Xb-ySa"/>
                     </navigationItem>
                 </viewController>
@@ -910,6 +911,11 @@
                                         <state key="normal" title="Man">
                                             <color key="titleColor" name="secondaryFontColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="maleButtonAction:" destination="Qew-Ao-AA5" eventType="touchUpInside" id="xGz-bn-XB4"/>
                                         </connections>
@@ -923,6 +929,11 @@
                                         <state key="normal" title="Woman">
                                             <color key="titleColor" name="secondaryFontColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="womanButtonAction:" destination="Qew-Ao-AA5" eventType="touchUpInside" id="hTV-7C-Aw5"/>
                                         </connections>
@@ -936,6 +947,11 @@
                                         <state key="normal" title="Other">
                                             <color key="titleColor" name="secondaryFontColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otherButtonAction:" destination="Qew-Ao-AA5" eventType="touchUpInside" id="xSR-3z-oce"/>
                                         </connections>
@@ -972,13 +988,18 @@
                                 <color key="textColor" name="secondaryFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-Rz-gNg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-Rz-gNg">
                                 <rect key="frame" x="45.666666666666657" y="669" width="38" height="36"/>
                                 <color key="backgroundColor" name="lightWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="APT-uR-R2P"/>
                                     <constraint firstAttribute="width" constant="38" id="ebJ-gb-pTE"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-5T-q2J">
                                 <rect key="frame" x="35" y="659" width="305" height="55"/>
@@ -1010,14 +1031,19 @@
                             <constraint firstItem="4UJ-Rz-gNg" firstAttribute="leading" secondItem="M3s-KL-oGa" secondAttribute="leading" constant="-20" id="vxx-oR-JhL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select your gender" leftItemsSupplementBackButton="YES" id="NLU-ch-BsQ">
-                        <barButtonItem key="rightBarButtonItem" title="skip" id="Lnd-7R-p1p">
+                    <navigationItem key="navigationItem" title="Select your gender" id="NLU-ch-BsQ">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="Lnd-7R-p1p">
                             <color key="tintColor" name="secondaryFontColor"/>
                             <connections>
                                 <action selector="skipBarButtonAction:" destination="Qew-Ao-AA5" id="2gY-Lk-eSP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="manButton" destination="NQD-r5-1Qt" id="WHy-zt-8ST"/>
+                        <outlet property="otherButton" destination="i6a-Kk-MDQ" id="8c1-ka-q86"/>
+                        <outlet property="womanButton" destination="Y5b-uH-iT8" id="IEt-i0-F2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq8-Nw-FaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

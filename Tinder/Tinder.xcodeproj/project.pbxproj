@@ -10,6 +10,9 @@
 		1C2AAEED255F918F00CAACF1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */; };
 		1C2AAEF2255FBBE600CAACF1 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF1255FBBE600CAACF1 /* InstructionViewController.swift */; };
 		1C2AAEF5255FBC5900CAACF1 /* SelectGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF4255FBC5900CAACF1 /* SelectGenderViewController.swift */; };
+		1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */; };
+		1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */; };
+		1C2AAF04255FF08700CAACF1 /* SelectGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */; };
 		74E65E325C4CA031374DE494 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */; };
 		C317014B24E6434300922F2E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014A24E6434300922F2E /* ViewExtension.swift */; };
 		C317014D24E6490C00922F2E /* Constant2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014C24E6490C00922F2E /* Constant2.swift */; };
@@ -49,6 +52,9 @@
 		1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		1C2AAEF1255FBBE600CAACF1 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		1C2AAEF4255FBC5900CAACF1 /* SelectGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenderViewController.swift; sourceTree = "<group>"; };
+		1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPrepareView.swift; sourceTree = "<group>"; };
+		1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenderViewModel.swift; sourceTree = "<group>"; };
 		22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317014A24E6434300922F2E /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		C317014C24E6490C00922F2E /* Constant2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant2.swift; sourceTree = "<group>"; };
@@ -101,7 +107,9 @@
 		1C2AAEEB255F917B00CAACF1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */,
+				1C2AAEFD255FEC2A00CAACF1 /* Profiles */,
+				1C2AAEF8255FD24D00CAACF1 /* Protocols */,
+				1C2AAEF7255FD24000CAACF1 /* LocationManager */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -109,10 +117,43 @@
 		1C2AAEF0255FBBC500CAACF1 /* Instruction */ = {
 			isa = PBXGroup;
 			children = (
+				1C2AAF02255FF05C00CAACF1 /* SelectGender */,
 				1C2AAEF1255FBBE600CAACF1 /* InstructionViewController.swift */,
-				1C2AAEF4255FBC5900CAACF1 /* SelectGenderViewController.swift */,
 			);
 			path = Instruction;
+			sourceTree = "<group>";
+		};
+		1C2AAEF7255FD24000CAACF1 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				1C2AAEEC255F918F00CAACF1 /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		1C2AAEF8255FD24D00CAACF1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1C2AAEFD255FEC2A00CAACF1 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		1C2AAF02255FF05C00CAACF1 /* SelectGender */ = {
+			isa = PBXGroup;
+			children = (
+				1C2AAEF4255FBC5900CAACF1 /* SelectGenderViewController.swift */,
+				1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */,
+			);
+			path = SelectGender;
 			sourceTree = "<group>";
 		};
 		3BBD1AECF875CFAF9AA7CB52 /* Pods */ = {
@@ -418,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2AAF04255FF08700CAACF1 /* SelectGenderViewModel.swift in Sources */,
 				C317015424E6927900922F2E /* SuggestionViewController.swift in Sources */,
 				C3B125F324E431770011EDE7 /* LoginViewController.swift in Sources */,
 				1C2AAEF5255FBC5900CAACF1 /* SelectGenderViewController.swift in Sources */,
@@ -430,9 +472,11 @@
 				C34F68E824E55D91008E2355 /* Segue.swift in Sources */,
 				C3B125FA24E43B040011EDE7 /* Constant.swift in Sources */,
 				C34F68EB24E568CF008E2355 /* StartViewController.swift in Sources */,
+				1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */,
 				C3B125E224E42E910011EDE7 /* Tinder.xcdatamodeld in Sources */,
 				C317014D24E6490C00922F2E /* Constant2.swift in Sources */,
 				C34F68E324E4FF99008E2355 /* User.swift in Sources */,
+				1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */,
 				C3B125D824E42E910011EDE7 /* AppDelegate.swift in Sources */,
 				C317015624E6928500922F2E /* ChatViewController.swift in Sources */,
 				C34F68E624E55D56008E2355 /* DashboardViewController.swift in Sources */,

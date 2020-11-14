@@ -14,6 +14,7 @@ class DashboardViewController: BaseViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var suggestionButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
+
     @IBOutlet weak var suggestionContainerView: UIView!
     @IBOutlet weak var chatContainerView: UIView!
     @IBOutlet weak var profileContainerView: UIView!
