@@ -17,6 +17,13 @@ protocol UserGenderChoosen {
     func getUserGender()->Gender
 }
 
+/**
+ Protocol for getting/setting the user gender preference on profile
+ */
+protocol UserGenderPreferenceChoosen {
+    mutating func userShow(genderPreference:Bool)
+    func getUserGenderPreference()->Bool
+}
 
 /**
  All available gender
@@ -37,6 +44,9 @@ struct UserProfile {
    
     // Hold the currently selected gender value
     private var gender:Gender?
+    
+    // To show gernder detail on profile
+    private var shouldShowGenderOnProfile:Bool = false
 }
 
 extension UserProfile: UserGenderChoosen {
@@ -46,5 +56,15 @@ extension UserProfile: UserGenderChoosen {
 
     mutating func user(gender: Gender) {
         self.gender = gender
+    }
+}
+
+extension UserProfile : UserGenderPreferenceChoosen {
+    mutating func userShow(genderPreference: Bool) {
+        shouldShowGenderOnProfile = genderPreference
+    }
+    
+    func getUserGenderPreference() -> Bool {
+        shouldShowGenderOnProfile
     }
 }

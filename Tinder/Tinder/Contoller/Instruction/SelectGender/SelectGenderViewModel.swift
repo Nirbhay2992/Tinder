@@ -12,14 +12,22 @@ class SelectGenderViewModel: NSObject {
 
     private var gender:Gender?{
         didSet{
-            bindSelectGenderViewModelToController()
+            bindSelectGenderViewModelToController(gender)
         }
     }
     
-    var bindSelectGenderViewModelToController : (() -> ()) = {}
+    private var shouldShowGenderOnProfile:Bool{
+        didSet{
+            bindShouldShowGenderOnProfileToController(shouldShowGenderOnProfile)
+        }
+    }
+    
+    var bindSelectGenderViewModelToController : ((_ gender:Gender?) -> ()) = {_ in }
+    var bindShouldShowGenderOnProfileToController : ((_ genderShouldShow:Bool) -> ()) = {_ in }
     
     override init() {
-        
+        shouldShowGenderOnProfile = UserProfile.shared.getUserGenderPreference()
+        gender = UserProfile.shared.getUserGender()
     }
     
 }
@@ -32,5 +40,15 @@ extension SelectGenderViewModel {
     func didGenderChange(selectedGender:Gender) {
         gender = selectedGender
         UserProfile.shared.user(gender: selectedGender)
+    }
+    
+    /**
+     Will called when user choose their preference to show gender on public
+     */
+    func didGenderPreferenceOnProfileChange() {
+        var toggledPreference:Bool = UserProfile.shared.getUserGenderPreference()
+        toggledPreference = !toggledPreference
+        shouldShowGenderOnProfile = toggledPreference
+        UserProfile.shared.userShow(genderPreference: toggledPreference)
     }
 }

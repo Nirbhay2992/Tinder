@@ -988,7 +988,7 @@
                                 <color key="textColor" name="secondaryFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-Rz-gNg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-Rz-gNg">
                                 <rect key="frame" x="45.666666666666657" y="669" width="38" height="36"/>
                                 <color key="backgroundColor" name="lightWhite"/>
                                 <constraints>
@@ -1040,6 +1040,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="continueButton" destination="M3s-KL-oGa" id="oj2-OX-T2M"/>
+                        <outlet property="genderPreferenceImageView" destination="4UJ-Rz-gNg" id="jF2-mq-Iia"/>
                         <outlet property="manButton" destination="NQD-r5-1Qt" id="WHy-zt-8ST"/>
                         <outlet property="otherButton" destination="i6a-Kk-MDQ" id="8c1-ka-q86"/>
                         <outlet property="womanButton" destination="Y5b-uH-iT8" id="IEt-i0-F2V"/>
