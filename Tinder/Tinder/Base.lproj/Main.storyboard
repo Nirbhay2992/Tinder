@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QsE-HH-85X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X5j-3t-2N5">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -175,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="6I8-uq-0ur" customClass="LoginViewModel" customModule="Tinder" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="-922.90640394088678"/>
+            <point key="canvasLocation" x="1129" y="-879"/>
         </scene>
         <!--MYPE-->
         <scene sceneID="xXg-zz-Krl">
@@ -362,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCF-al-tQL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="-149.26108374384236"/>
+            <point key="canvasLocation" x="1129" y="11"/>
         </scene>
         <!--Suggestion View Controller-->
         <scene sceneID="9qN-Oz-rj8">
@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyr-HU-nJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="-809"/>
+            <point key="canvasLocation" x="3084" y="-809.48275862068965"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="Khd-Ke-jQe">
@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCx-Nb-gop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="-207"/>
+            <point key="canvasLocation" x="3084" y="-207.26600985221677"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="fES-qf-9nB">
@@ -627,11 +627,12 @@
                         <outlet property="scrollContainerView" destination="X8L-cM-LaW" id="DKl-aw-04N"/>
                         <outlet property="settingButton" destination="bFH-sk-qTE" id="DYX-Ld-avq"/>
                         <outlet property="tinderPlusButton" destination="4e2-Vi-B8c" id="qAc-CA-fYy"/>
+                        <segue destination="Mwi-2N-un7" kind="show" id="3hf-6Z-rkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NL-8a-9nn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143.125" y="-1515.8450704225352"/>
+            <point key="canvasLocation" x="3084" y="-1380"/>
         </scene>
         <!--Profile Page View Controller-->
         <scene sceneID="oDx-Sh-X4U">
@@ -639,55 +640,26 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="flipHorizontal" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="min" id="Fq0-KE-t5H" customClass="ProfilePageViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jG-Bo-6Yl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2891" y="-1515"/>
+            <point key="canvasLocation" x="4172" y="-1311"/>
         </scene>
-        <!--Edit Info View Controller-->
+        <!--Edit Info-->
         <scene sceneID="Wlg-ip-Wnv">
             <objects>
-                <viewController storyboardIdentifier="EditInfoViewController" id="Mwi-2N-un7" customClass="EditInfoViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditInfoViewController" title="Edit Info" id="Mwi-2N-un7" customClass="EditInfoViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qn7-F7-2Od">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWj-uU-vU9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="a9a-nQ-093"/>
-                                </constraints>
-                                <color key="barTintColor" name="lightWhite"/>
-                                <items>
-                                    <navigationItem title="Edit Information" id="XT4-sS-bo9">
-                                        <barButtonItem key="leftBarButtonItem" image="backButtonIcon" id="hGf-bn-J3t">
-                                            <color key="tintColor" name="headingColor"/>
-                                            <connections>
-                                                <action selector="didBackButtonTouch:" destination="Mwi-2N-un7" id="P1I-PW-QYJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7Uh-n1-t5f">
-                                            <color key="tintColor" name="headingColor"/>
-                                            <connections>
-                                                <action selector="didDoneButtonTouch:" destination="Mwi-2N-un7" id="335-wB-O1E"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lHN-Co-ftO"/>
                         <color key="backgroundColor" name="lightWhite"/>
-                        <constraints>
-                            <constraint firstItem="uWj-uU-vU9" firstAttribute="top" secondItem="lHN-Co-ftO" secondAttribute="top" id="EBB-Ia-6at"/>
-                            <constraint firstItem="uWj-uU-vU9" firstAttribute="trailing" secondItem="lHN-Co-ftO" secondAttribute="trailing" id="kDm-LC-mrd"/>
-                            <constraint firstItem="uWj-uU-vU9" firstAttribute="leading" secondItem="lHN-Co-ftO" secondAttribute="leading" id="ocj-Vo-O00"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zdR-Ng-2Eq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lz-5x-dor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="GnL-7f-9Pn" customClass="EditInfoViewModel" customModule="Tinder" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="3585" y="-1516"/>
+            <point key="canvasLocation" x="4242" y="-1707"/>
         </scene>
-        <!--Start View Controller-->
+        <!--MYPE-->
         <scene sceneID="ubg-y2-ymG">
             <objects>
                 <viewController id="e77-Cs-3Af" customClass="StartViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -697,27 +669,45 @@
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NuN-Zh-KbY">
                                 <rect key="frame" x="169" y="414.66666666666669" width="37" height="37"/>
-                                <color key="color" name="highlightedColor"/>
+                                <color key="color" name="subHeadingColor"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow1-0l-1St">
+                                <rect key="frame" x="117.00000000000001" y="171" width="141.33333333333337" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" name="subHeadingColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your type?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCp-a1-PhM">
+                                <rect key="frame" x="115.00000000000001" y="221" width="145.33333333333337" height="19"/>
+                                <color key="tintColor" name="White"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <color key="textColor" name="subHeadingColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gab-q0-242"/>
-                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="backgroundColor" name="primaryBlueColor"/>
                         <constraints>
                             <constraint firstItem="NuN-Zh-KbY" firstAttribute="centerX" secondItem="Gab-q0-242" secondAttribute="centerX" id="6RI-QO-QKE"/>
                             <constraint firstItem="NuN-Zh-KbY" firstAttribute="centerY" secondItem="Gab-q0-242" secondAttribute="centerY" id="9eY-jf-rla"/>
+                            <constraint firstItem="GCp-a1-PhM" firstAttribute="top" secondItem="Ow1-0l-1St" secondAttribute="bottom" constant="-10" id="GWe-Ql-N2B"/>
+                            <constraint firstItem="Ow1-0l-1St" firstAttribute="top" secondItem="Gab-q0-242" secondAttribute="top" constant="83" id="Jut-dN-s1b"/>
+                            <constraint firstItem="GCp-a1-PhM" firstAttribute="centerX" secondItem="Ow1-0l-1St" secondAttribute="centerX" id="g6K-YH-Nwc"/>
+                            <constraint firstItem="Ow1-0l-1St" firstAttribute="centerX" secondItem="Gab-q0-242" secondAttribute="centerX" id="vTf-Bw-6jA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3ew-eK-dZz">
+                    <navigationItem key="navigationItem" title="MYPE" id="3ew-eK-dZz">
                         <barButtonItem key="leftBarButtonItem" image="backButtonIcon" id="8wD-MZ-XC5"/>
                     </navigationItem>
                     <connections>
                         <segue destination="cQK-Be-SGL" kind="show" identifier="segueToDashboardFromStart" id="4XD-9N-f5l"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segueToLoginFromStart" id="kbV-Yt-SYv"/>
+                        <segue destination="Xb4-kF-MnD" kind="show" id="fv2-uU-ejp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aw-hI-kyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="-445"/>
+            <point key="canvasLocation" x="-280.80000000000001" y="-445.56650246305418"/>
         </scene>
         <!--Instruction-->
         <scene sceneID="ndj-LP-SVJ">
@@ -923,7 +913,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1d-cK-GQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3143" y="-446"/>
+            <point key="canvasLocation" x="1129" y="-1708"/>
         </scene>
         <!--Select your gender-->
         <scene sceneID="kDE-Ls-X2R">
@@ -1081,7 +1071,6 @@
                             <color key="tintColor" name="secondaryFontColor"/>
                             <connections>
                                 <action selector="skipBarButtonAction:" destination="Qew-Ao-AA5" id="2gY-Lk-eSP"/>
-                                <segue destination="e77-Cs-3Af" kind="show" id="XJj-6Y-r6m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1095,30 +1084,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq8-Nw-FaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2244" y="-446"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SSL-Tj-8aR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QsE-HH-85X" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="backButtonIcon" id="LBT-w3-Vkn">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="headingColor"/>
-                        <color key="barTintColor" name="White"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="headingColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xb4-kF-MnD" kind="relationship" relationship="rootViewController" id="VMu-8a-B7c"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k2r-Yg-wD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4212" y="-446"/>
+            <point key="canvasLocation" x="2209" y="-1708"/>
         </scene>
         <!--Near By Friends View Controller-->
         <scene sceneID="akQ-8N-Ms8">
@@ -1127,16 +1093,40 @@
                     <view key="view" contentMode="scaleToFill" id="LHC-Op-xwA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="625"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YHl-mc-bPr"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsM-NG-M1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="475"/>
+            <point key="canvasLocation" x="3084" y="386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iey-K3-xao">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X5j-3t-2N5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ub7-WG-nUD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="White"/>
+                        <color key="tintColor" name="headingColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="headingColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e77-Cs-3Af" kind="relationship" relationship="rootViewController" id="Roj-2Y-2qT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDb-Cy-YwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1223.2" y="-445.56650246305418"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VOV-QG-N92"/>
+        <segue reference="4XD-9N-f5l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backButtonIcon" width="16" height="16"/>
@@ -1173,6 +1163,9 @@
         </namedColor>
         <namedColor name="pink">
             <color red="0.98039215686274506" green="0.19607843137254902" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryBlueColor">
+            <color red="0.0" green="0.55294117647058827" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryFontColor">
             <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

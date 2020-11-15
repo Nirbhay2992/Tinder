@@ -62,7 +62,7 @@ extension UserProfile: UserGenderChoosen {
     }
 }
 
-extension UserProfile : UserGenderPreferenceChoosen {
+extension UserProfile: UserGenderPreferenceChoosen {
     mutating func userShow(genderPreference: Bool) {
         shouldShowGenderOnProfile = genderPreference
     }
@@ -72,7 +72,7 @@ extension UserProfile : UserGenderPreferenceChoosen {
     }
 }
 
-extension UserProfile : UserLocationChanged {
+extension UserProfile: UserLocationChanged {
     mutating func userChanged(location: UserLocation) {
         userLocation = location
     }

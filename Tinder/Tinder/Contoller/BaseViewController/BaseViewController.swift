@@ -29,7 +29,8 @@ extension BaseViewController{
         let storyboard = UIStoryboard(name: StoryboardIdentifier.main, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier:identifier)
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: animation)
+        self.navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: animation)
     }
     
     /**

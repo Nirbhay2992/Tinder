@@ -25,7 +25,7 @@ class NearByFriendViewModel: NSObject {
 extension NearByFriendViewModel {
     
     /**
-            # To find the current user location, this location will be shared with the end point (server) to find out the filtered friend list.
+            # To find the current user location, this location will be shared with the end point (server) to get the filtered friend list.
             # This current location will be stored temporary also.
      */
     func findCurrentLocation() {

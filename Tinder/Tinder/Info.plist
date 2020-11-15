@@ -43,6 +43,8 @@
 	<string>$(PRODUCT_NAME) uses Media Library to let you choose profile image.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) uses Media Library to let you choose profile image.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) uses Media Library to let you choose profile image.</string>
 	<key>UIApplicationSceneManifest</key>
