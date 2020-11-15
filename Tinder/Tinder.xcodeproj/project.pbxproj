@@ -13,6 +13,7 @@
 		1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */; };
 		1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */; };
 		1C2AAF04255FF08700CAACF1 /* SelectGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */; };
+		1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */; };
 		74E65E325C4CA031374DE494 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */; };
 		C317014B24E6434300922F2E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014A24E6434300922F2E /* ViewExtension.swift */; };
 		C317014D24E6490C00922F2E /* Constant2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014C24E6490C00922F2E /* Constant2.swift */; };
@@ -55,6 +56,7 @@
 		1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPrepareView.swift; sourceTree = "<group>"; };
 		1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenderViewModel.swift; sourceTree = "<group>"; };
+		1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByFriendsViewController.swift; sourceTree = "<group>"; };
 		22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317014A24E6434300922F2E /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		C317014C24E6490C00922F2E /* Constant2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant2.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			path = SelectGender;
 			sourceTree = "<group>";
 		};
+		1CA2BBC32561210C004B552B /* NearByFriends */ = {
+			isa = PBXGroup;
+			children = (
+				1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */,
+			);
+			path = NearByFriends;
+			sourceTree = "<group>";
+		};
 		3BBD1AECF875CFAF9AA7CB52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +248,7 @@
 		C34F68E924E56857008E2355 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				1CA2BBC32561210C004B552B /* NearByFriends */,
 				1C2AAEF0255FBBC500CAACF1 /* Instruction */,
 				C317015024E6925400922F2E /* Chat */,
 				C317014F24E6924C00922F2E /* Suggestion */,
@@ -464,6 +475,7 @@
 				C3B125F324E431770011EDE7 /* LoginViewController.swift in Sources */,
 				1C2AAEF5255FBC5900CAACF1 /* SelectGenderViewController.swift in Sources */,
 				C317016624E8F9B400922F2E /* EditInfoViewModel.swift in Sources */,
+				1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */,
 				C317015F24E7E11700922F2E /* ImageViewExtension.swift in Sources */,
 				C3B125F024E431410011EDE7 /* BaseViewController.swift in Sources */,
 				C317016324E8F99600922F2E /* EditInfoViewController.swift in Sources */,

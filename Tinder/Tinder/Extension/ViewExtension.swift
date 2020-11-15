@@ -14,19 +14,8 @@ extension UIView{
     /**
      To set the background color
      */
-    func setBackground() {
-        // orange
-        let colorOrange =  UIColor(red: 250.0/255.0, green: 90.0/255.0, blue: 70.0/255.0, alpha: 1.0).cgColor
-        // pink
-        let colorPink = UIColor(red: 250.0/255.0, green: 0.0/255.0, blue: 110.0/255.0, alpha: 1.0).cgColor
-        // Blue
-        //let colorBlue = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 0.60).cgColor
-
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorOrange,colorPink,colorPink]
-        gradientLayer.locations = [0.1, 1.0]
-        gradientLayer.frame = self.bounds
-        self.layer.insertSublayer(gradientLayer, at:0)
+    func setDefaultBackgroundColor() {
+        self.backgroundColor = UIColor.mainBackgroundColor
     }
     
     /**
