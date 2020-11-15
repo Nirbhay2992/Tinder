@@ -20,9 +20,6 @@ class PhotoLibraryDelegate: NSObject {
     
     var bindPickedImageToController:(_ pickedImage:UIImage?)->Void = {_ in}
     
-    override init() {
-        
-    }
 }
 
 extension PhotoLibraryDelegate : UIImagePickerControllerDelegate{

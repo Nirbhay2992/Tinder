@@ -67,7 +67,6 @@ class ProfileViewController: BaseViewController {
 extension ProfileViewController : UIViewControllerPrepareView{
     func prepareView() {
         renderUI()
-        
     }
 }
 

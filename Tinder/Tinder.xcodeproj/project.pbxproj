@@ -17,6 +17,9 @@
 		1CA2BBC825612F7C004B552B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2BBC725612F7C004B552B /* Photos.framework */; };
 		1CA2BBCB25613025004B552B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBCA25613025004B552B /* ProfileViewModel.swift */; };
 		1CA2BBCE256159D6004B552B /* PhotoLibraryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBCD256159D6004B552B /* PhotoLibraryDelegate.swift */; };
+		1CA2BBD1256167D8004B552B /* NearByFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBD0256167D8004B552B /* NearByFriendViewModel.swift */; };
+		1CA2BBD425616DE0004B552B /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBD325616DE0004B552B /* Gender.swift */; };
+		1CA2BBD725616E0A004B552B /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBD625616E0A004B552B /* UserLocation.swift */; };
 		74E65E325C4CA031374DE494 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */; };
 		C317014B24E6434300922F2E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014A24E6434300922F2E /* ViewExtension.swift */; };
 		C317014D24E6490C00922F2E /* Constant2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317014C24E6490C00922F2E /* Constant2.swift */; };
@@ -63,6 +66,9 @@
 		1CA2BBC725612F7C004B552B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1CA2BBCA25613025004B552B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		1CA2BBCD256159D6004B552B /* PhotoLibraryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryDelegate.swift; sourceTree = "<group>"; };
+		1CA2BBD0256167D8004B552B /* NearByFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByFriendViewModel.swift; sourceTree = "<group>"; };
+		1CA2BBD325616DE0004B552B /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		1CA2BBD625616E0A004B552B /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C317014A24E6434300922F2E /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		C317014C24E6490C00922F2E /* Constant2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant2.swift; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */,
+				1CA2BBD0256167D8004B552B /* NearByFriendViewModel.swift */,
 			);
 			path = NearByFriends;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 		C317014E24E6924700922F2E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1CA2BBC925613000004B552B /* ProfileViewController */,
 				C317016424E8F99B00922F2E /* Edit Info */,
 				C317015924E7C82200922F2E /* item */,
 				C317015724E7C6F200922F2E /* ProfilePageViewController.swift */,
@@ -230,7 +238,6 @@
 		C317015924E7C82200922F2E /* item */ = {
 			isa = PBXGroup;
 			children = (
-				1CA2BBC925613000004B552B /* ProfileViewController */,
 				C317015A24E7C82200922F2E /* CarouselItem.xib */,
 				C317015B24E7C82200922F2E /* CarouselItem.swift */,
 			);
@@ -250,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				C34F68E224E4FF99008E2355 /* User.swift */,
+				1CA2BBD325616DE0004B552B /* Gender.swift */,
+				1CA2BBD625616E0A004B552B /* UserLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -504,11 +513,14 @@
 				C3B125FA24E43B040011EDE7 /* Constant.swift in Sources */,
 				C34F68EB24E568CF008E2355 /* StartViewController.swift in Sources */,
 				1CA2BBCE256159D6004B552B /* PhotoLibraryDelegate.swift in Sources */,
+				1CA2BBD425616DE0004B552B /* Gender.swift in Sources */,
 				1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */,
 				C3B125E224E42E910011EDE7 /* Tinder.xcdatamodeld in Sources */,
+				1CA2BBD725616E0A004B552B /* UserLocation.swift in Sources */,
 				C317014D24E6490C00922F2E /* Constant2.swift in Sources */,
 				C34F68E324E4FF99008E2355 /* User.swift in Sources */,
 				1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */,
+				1CA2BBD1256167D8004B552B /* NearByFriendViewModel.swift in Sources */,
 				C3B125D824E42E910011EDE7 /* AppDelegate.swift in Sources */,
 				C317015624E6928500922F2E /* ChatViewController.swift in Sources */,
 				C34F68E624E55D56008E2355 /* DashboardViewController.swift in Sources */,
