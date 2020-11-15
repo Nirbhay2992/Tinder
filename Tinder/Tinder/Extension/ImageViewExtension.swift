@@ -44,7 +44,7 @@ extension UIImageView {
     /**
      To download the image fomr the given url
      */
-    private func download(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    private func download(from url: URL, contentMode mode: UIView.ContentMode = .scaleToFill) {
         contentMode = mode
         
         // check for cache
@@ -74,7 +74,7 @@ extension UIImageView {
     }
    
     
-    public func download(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    public func download(from link: String, contentMode mode: UIView.ContentMode = .scaleToFill) {
         guard let url = URL(string: link) else { return }
         download(from: url, contentMode: mode)
     }
