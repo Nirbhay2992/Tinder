@@ -43,6 +43,7 @@ class SelectGenderViewController: BaseViewController {
     }
     
     @IBAction func continueButtonAction(_ sender: UIButton) {
+        viewModel.didGenderChoose()
     }
     
     @IBAction func choosePublicGenderOnProfileButtonAction(_ sender: Any) {
@@ -111,5 +112,8 @@ extension SelectGenderViewController : UIViewControllerPrepareView{
     func prepareView() {
         
         addBorder(width: 1.0, color: #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1), views: [manButton,womanButton,otherButton])
+        
+        continueButton.isEnabled = viewModel.isGenderChoosen()
+        
     }
 }

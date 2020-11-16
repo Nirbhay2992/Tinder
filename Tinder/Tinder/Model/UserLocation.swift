@@ -12,11 +12,11 @@ import Foundation
  To hold the current location of the user
  */
 struct UserLocation {
-    private var latitude:Float!
-    private var longitude:Float!
+    private var latitude:Double!
+    private var longitude:Double!
     private var address:String!
     
-    init(latitude:Float, longitude:Float, address:String) {
+    init(latitude:Double, longitude:Double, address:String) {
         self.latitude = latitude
         self.longitude = longitude
         self.address = address

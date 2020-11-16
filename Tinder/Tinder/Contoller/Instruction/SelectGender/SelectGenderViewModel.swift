@@ -39,7 +39,6 @@ extension SelectGenderViewModel {
      */
     func didGenderChange(selectedGender:Gender) {
         gender = selectedGender
-        UserProfile.shared.user(gender: selectedGender)
     }
     
     /**
@@ -49,6 +48,33 @@ extension SelectGenderViewModel {
         var toggledPreference:Bool = UserProfile.shared.getUserGenderPreference()
         toggledPreference = !toggledPreference
         shouldShowGenderOnProfile = toggledPreference
+        // Save preference to the UserDefault
         UserProfile.shared.userShow(genderPreference: toggledPreference)
+    }
+    
+    
+    /**
+        Gender is choosen
+     */
+    func didGenderChoose(){
+        if let gender = gender {
+            UserProfile.shared.user(gender: gender)
+        }
+    }
+    
+    /**
+        To check if gender is decided
+     */
+    func isGenderChoosen() -> Bool {
+        let gender:Gender? = self.gender
+        if let gender = gender {
+            switch gender {
+            case .none:
+                return false
+            default:
+                return true
+            }
+        }
+        return false
     }
 }
