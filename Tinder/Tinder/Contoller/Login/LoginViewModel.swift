@@ -29,7 +29,7 @@ class LoginViewModel: NSObject {
     
     override init() {
         super.init()
-        GIDSignIn.sharedInstance().clientID = "1092483367760-au344g2toecet1km9f0j6vjfmhdjulm4.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = Google.clientKey
         GIDSignIn.sharedInstance().delegate = self
     }
     
@@ -69,7 +69,7 @@ extension LoginViewModel : GIDSignInDelegate{
         let profileUrl = user.profile.imageURL(withDimension: 200)
         let fullName = user.profile.name
         
-        let newUser = User.init(name: fullName, is_silhouette: false, id: userId, emailID: email, profilePhotoUrl: profileUrl?.absoluteString, loginSource: LoginSource.google.getRawValue(), userLogout: false)
+        let newUser = User.init(name: fullName, id: userId, emailID: email, profilePhotoUrl: profileUrl?.absoluteString, loginSource: LoginSource.google.getRawValue())
         
 //        let existingUser = UserManager.shared.getCurrentUser()
 //        if(existingUser == newUser){
@@ -152,9 +152,8 @@ extension LoginViewModel {
                     let picture:NSDictionary = resultDic .value(forKey: "picture") as! NSDictionary
                     let data:NSDictionary = picture .value(forKey: "data") as! NSDictionary
                     let profileUrl:String? = data .value(forKey: "url") as? String
-                    let isSilhouette:Bool? = data .value(forKey: "is_silhouette") as? Bool
                     
-                    let loggedInUser = User.init(name: name, is_silhouette: isSilhouette, id: id, emailID: email, profilePhotoUrl: profileUrl, loginSource: LoginSource.facebook.getRawValue(), userLogout: false)
+                    let loggedInUser = User.init(name: name, id: id, emailID: email, profilePhotoUrl: profileUrl, loginSource: LoginSource.facebook.getRawValue())
                     
                     self.set(user:loggedInUser)
                 }

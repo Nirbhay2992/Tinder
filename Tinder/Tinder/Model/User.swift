@@ -11,12 +11,20 @@ import Foundation
 
 struct User:Codable{
     var name:String?
-    var is_silhouette:Bool?
-    var id:String?
+    var deviceId:String?
+    var id:String?            // id represent the social media id
     var emailID:String?
     var profilePhotoUrl:String?
     var loginSource:String? // Facebook/Google
-    var userLogout:Bool?
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case id = "social_id"
+        case emailID = "email"
+        case profilePhotoUrl
+        case deviceId = "device_id"
+        case loginSource = "login_type"
+    }
 }
 
 extension User : Hashable{
@@ -65,13 +73,15 @@ struct UserManager {
     }
     
     // Login Session
+    
     public func isSessionExpired()->Bool{
-        let user:User? =  getUserFromUserDefault()
-        return user?.userLogout ?? true
+        //let user:User? =  getUserFromUserDefault()
+        //TODO:- To be work on
+        return true
     }
     
     public func getNewUser()->User{
-        let loggedInUser = User.init(name: String(), is_silhouette: Bool(), id: String(), emailID: String(), profilePhotoUrl: String(), loginSource:LoginSource.unknown.getRawValue(), userLogout: false)
+        let loggedInUser = User.init(name: String(), id: String(), emailID: String(), profilePhotoUrl: String(), loginSource:LoginSource.unknown.getRawValue())
         return loggedInUser
     }
 }
