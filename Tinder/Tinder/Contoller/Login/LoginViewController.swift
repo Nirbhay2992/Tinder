@@ -49,7 +49,7 @@ private extension LoginViewController{
      Change the background color
      */
     private func renderUI(){
-        view.setBackground()
+        view.setDefaultBackgroundColor()
     }
     
     

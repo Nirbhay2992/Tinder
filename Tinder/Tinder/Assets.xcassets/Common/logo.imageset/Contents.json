@@ -25,6 +25,7 @@
       "scale" : "1x"
     },
     {
+      "filename" : "speech-bubble-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -35,7 +36,6 @@
           "value" : "light"
         }
       ],
-      "filename" : "logo.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -46,7 +46,6 @@
           "value" : "dark"
         }
       ],
-      "filename" : "speech-bubble.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

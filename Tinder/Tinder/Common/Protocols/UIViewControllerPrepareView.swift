@@ -46,7 +46,6 @@ extension UIViewControllerPrepareView{
     }
     
     func setBackground(color:UIColor, views:[UIView]) {
-        
         for view in views{
             setBackground(color: color, view: view)
         }

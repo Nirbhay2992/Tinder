@@ -52,6 +52,9 @@ class SelectGenderViewController: BaseViewController {
     @IBAction func skipBarButtonAction(_ sender: Any) {
     }
     
+    @IBAction func backBarButtonPressed(_ sender: Any) {
+        popViewController()
+    }
 }
 
 

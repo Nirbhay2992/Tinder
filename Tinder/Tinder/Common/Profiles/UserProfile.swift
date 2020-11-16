@@ -25,15 +25,15 @@ protocol UserGenderPreferenceChoosen {
     func getUserGenderPreference()->Bool
 }
 
+
 /**
- All available gender
+ Protocol for getting/setting the user location
  */
-enum Gender:String {
-    case male = "Male"
-    case femail = "Female"
-    case other = "Other"
-    case none = "NA"
+protocol UserLocationChanged {
+    mutating func userChanged(location:UserLocation)
+    func getUserCurrentLocation()->UserLocation?
 }
+
 
 /**
  Will hold the all attribute related with the user profile
@@ -47,6 +47,9 @@ struct UserProfile {
     
     // To show gernder detail on profile
     private var shouldShowGenderOnProfile:Bool = false
+    
+    // To hold the current user location
+    private var userLocation:UserLocation?
 }
 
 extension UserProfile: UserGenderChoosen {
@@ -59,12 +62,22 @@ extension UserProfile: UserGenderChoosen {
     }
 }
 
-extension UserProfile : UserGenderPreferenceChoosen {
+extension UserProfile: UserGenderPreferenceChoosen {
     mutating func userShow(genderPreference: Bool) {
         shouldShowGenderOnProfile = genderPreference
     }
     
     func getUserGenderPreference() -> Bool {
         shouldShowGenderOnProfile
+    }
+}
+
+extension UserProfile: UserLocationChanged {
+    mutating func userChanged(location: UserLocation) {
+        userLocation = location
+    }
+    
+    func getUserCurrentLocation() -> UserLocation? {
+        userLocation
     }
 }

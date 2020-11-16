@@ -14,6 +14,7 @@ class StartViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
         let identifier = UserManager.shared.isSessionExpired() ? Segue.segueToLoginFromStart : Segue.segueToDashboardFromStart
         performSegue(withIdentifier: identifier, sender: nil)
     }
