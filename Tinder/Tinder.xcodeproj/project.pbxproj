@@ -17,6 +17,8 @@
 		1C704F74256287A9003CE8FE /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F73256287A9003CE8FE /* TagViewController.swift */; };
 		1C704F7925628948003CE8FE /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F7825628948003CE8FE /* TagTableViewCell.swift */; };
 		1C704F7D2562B5FD003CE8FE /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */; };
+		1C720F392563897D000672F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C720F382563897D000672F9 /* APIManager.swift */; };
+		1C720F3C256389A5000672F9 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C720F3B256389A5000672F9 /* BaseURL.swift */; };
 		1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */; };
 		1CA2BBC825612F7C004B552B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2BBC725612F7C004B552B /* Photos.framework */; };
 		1CA2BBCB25613025004B552B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBCA25613025004B552B /* ProfileViewModel.swift */; };
@@ -70,6 +72,8 @@
 		1C704F73256287A9003CE8FE /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		1C704F7825628948003CE8FE /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
+		1C720F382563897D000672F9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1C720F3B256389A5000672F9 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByFriendsViewController.swift; sourceTree = "<group>"; };
 		1CA2BBC725612F7C004B552B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1CA2BBCA25613025004B552B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		1C2AAEEB255F917B00CAACF1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1C720F372563895F000672F9 /* API Manager */,
 				1C704F7B2562B5ED003CE8FE /* Social Login */,
 				1C704F7625628912003CE8FE /* TableViewCells */,
 				1C2AAEFD255FEC2A00CAACF1 /* Profiles */,
@@ -204,6 +209,15 @@
 				1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */,
 			);
 			path = "Social Login";
+			sourceTree = "<group>";
+		};
+		1C720F372563895F000672F9 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1C720F382563897D000672F9 /* APIManager.swift */,
+				1C720F3B256389A5000672F9 /* BaseURL.swift */,
+			);
+			path = "API Manager";
 			sourceTree = "<group>";
 		};
 		1CA2BBC32561210C004B552B /* NearByFriends */ = {
@@ -539,6 +553,7 @@
 				C3B125F324E431770011EDE7 /* LoginViewController.swift in Sources */,
 				1C2AAEF5255FBC5900CAACF1 /* SelectGenderViewController.swift in Sources */,
 				C317016624E8F9B400922F2E /* EditInfoViewModel.swift in Sources */,
+				1C720F3C256389A5000672F9 /* BaseURL.swift in Sources */,
 				1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */,
 				C317015F24E7E11700922F2E /* ImageViewExtension.swift in Sources */,
 				C3B125F024E431410011EDE7 /* BaseViewController.swift in Sources */,
@@ -570,6 +585,7 @@
 				C317015224E6926700922F2E /* ProfileViewController.swift in Sources */,
 				1C704F7D2562B5FD003CE8FE /* SocialLogin.swift in Sources */,
 				1C704F74256287A9003CE8FE /* TagViewController.swift in Sources */,
+				1C720F392563897D000672F9 /* APIManager.swift in Sources */,
 				C3B125F524E431C60011EDE7 /* LoginViewModel.swift in Sources */,
 				C317014B24E6434300922F2E /* ViewExtension.swift in Sources */,
 			);
