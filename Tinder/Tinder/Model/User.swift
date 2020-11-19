@@ -113,7 +113,7 @@ struct UserManager {
     }
     
     public func isBasicDetailFilled()->Bool{
-        return false
+        return true
     }
     
     public func getNewUser()->User{
