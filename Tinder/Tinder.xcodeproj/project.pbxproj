@@ -13,6 +13,7 @@
 		1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */; };
 		1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */; };
 		1C2AAF04255FF08700CAACF1 /* SelectGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */; };
+		1C2D78C62564EBEE00CE0BC7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */; };
 		1C704F70256220FB003CE8FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C704F6F256220FB003CE8FE /* CoreLocation.framework */; };
 		1C704F74256287A9003CE8FE /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F73256287A9003CE8FE /* TagViewController.swift */; };
 		1C704F7925628948003CE8FE /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F7825628948003CE8FE /* TagTableViewCell.swift */; };
@@ -68,6 +69,7 @@
 		1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPrepareView.swift; sourceTree = "<group>"; };
 		1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenderViewModel.swift; sourceTree = "<group>"; };
+		1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1C704F6F256220FB003CE8FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1C704F73256287A9003CE8FE /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		1C704F7825628948003CE8FE /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				1C720F382563897D000672F9 /* APIManager.swift */,
 				1C720F3B256389A5000672F9 /* BaseURL.swift */,
+				1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */,
 			);
 			path = "API Manager";
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				1C720F392563897D000672F9 /* APIManager.swift in Sources */,
 				C3B125F524E431C60011EDE7 /* LoginViewModel.swift in Sources */,
 				C317014B24E6434300922F2E /* ViewExtension.swift in Sources */,
+				1C2D78C62564EBEE00CE0BC7 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

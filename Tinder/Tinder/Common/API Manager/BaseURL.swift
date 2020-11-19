@@ -26,8 +26,8 @@ enum Function : String {
 
 
 private struct CurrentBaseURL {
-    static let URL = BaseURL.development
-    static let version = "api/v1"
+    static let URL = BaseURL.development.rawValue
+    static let version = "api/v1/"
     
     static func getURL(function:Function)->String{
         return "\(URL)" + "\(version)"+"\(function.rawValue)"

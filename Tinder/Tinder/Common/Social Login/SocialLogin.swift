@@ -9,6 +9,7 @@
 import Foundation
 
 enum SocialMediaSource : Int {
+    case unknown = 0 
     case facebook = 1
     case google   = 2
 }

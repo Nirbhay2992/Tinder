@@ -9,13 +9,44 @@
 import Foundation
 
 
+
+// MARK: - BaseModal
+
+struct BaseResponse<T:Codable> :Codable {
+    let status:Int?
+    let message:String?
+    var result:T?
+    
+    enum CodingKeys: String, CodingKey {
+        case status = "CODE"
+        case message = "MESSAGE"
+        case result = "RESULT"
+    }
+}
+
+struct LoginResponse : Codable{
+    var emailID:String?
+    enum CodingKeys: String, CodingKey {
+        case emailID = "email"
+    }
+}
+
 struct User:Codable{
     var name:String?
     var deviceId:String?
     var id:String?            // id represent the social media id
     var emailID:String?
     var profilePhotoUrl:String?
-    var loginSource:String? // Facebook/Google
+    var loginSource:Int? // Facebook/Google
+    
+    init(name:String?, id:String?, email:String?,profilePhotoUrl:String?,loginSource:Int?) {
+        self.name = name
+        self.id = id
+        self.deviceId = id
+        self.emailID = email
+        self.profilePhotoUrl = profilePhotoUrl
+        self.loginSource = loginSource
+    }
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -26,6 +57,7 @@ struct User:Codable{
         case loginSource = "login_type"
     }
 }
+
 
 extension User : Hashable{
     func hash(into hasher: inout Hasher){
@@ -81,7 +113,7 @@ struct UserManager {
     }
     
     public func getNewUser()->User{
-        let loggedInUser = User.init(name: String(), id: String(), emailID: String(), profilePhotoUrl: String(), loginSource:LoginSource.unknown.getRawValue())
+        let loggedInUser = User.init(name: String(), id: String(), email: String(), profilePhotoUrl: String(), loginSource:SocialMediaSource.unknown.rawValue)
         return loggedInUser
     }
 }

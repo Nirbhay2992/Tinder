@@ -26,11 +26,13 @@ class LoginViewModel: NSObject {
     // Properties
     var fbLoginManager : LoginManager = LoginManager()
     
+    private var apiManager:APIManager!
     
     override init() {
         super.init()
         GIDSignIn.sharedInstance().clientID = Google.clientKey
         GIDSignIn.sharedInstance().delegate = self
+        apiManager = APIManager()
     }
     
     /**
@@ -69,17 +71,11 @@ extension LoginViewModel : GIDSignInDelegate{
         let profileUrl = user.profile.imageURL(withDimension: 200)
         let fullName = user.profile.name
         
-        let newUser = User.init(name: fullName, id: userId, emailID: email, profilePhotoUrl: profileUrl?.absoluteString, loginSource: LoginSource.google.getRawValue())
+        let newUser = User.init(name: fullName, id: userId, email: email, profilePhotoUrl: profileUrl?.absoluteString, loginSource: SocialMediaSource.google.rawValue)
         
-//        let existingUser = UserManager.shared.getCurrentUser()
-//        if(existingUser == newUser){
-//            print("Same login")
-//        }
-//        else{
-//            print("Different login")
-//        }
-        self.set(user: newUser)
-        delegate?.didLoginSuccessfully()
+    
+        // Authenticate with MYPE server
+        performLogin(user: newUser)
     }
     
     
@@ -153,7 +149,7 @@ extension LoginViewModel {
                     let data:NSDictionary = picture .value(forKey: "data") as! NSDictionary
                     let profileUrl:String? = data .value(forKey: "url") as? String
                     
-                    let loggedInUser = User.init(name: name, id: id, emailID: email, profilePhotoUrl: profileUrl, loginSource: LoginSource.facebook.getRawValue())
+                    let loggedInUser = User.init(name: name, id: id, email: email, profilePhotoUrl: profileUrl, loginSource: SocialMediaSource.facebook.rawValue)
                     
                     self.set(user:loggedInUser)
                 }
@@ -163,5 +159,20 @@ extension LoginViewModel {
                 }
             })
         }
+    }
+}
+
+
+// API Accessing
+extension LoginViewModel{
+    
+    func performLogin(user:User) {
+//        apiManager.performLogin(user: user) { (user, errorMessage) in
+//            print("********")
+//            print(user?.status)
+//            print("********")
+//            //self.set(user: user?.status)
+//            self.delegate?.didLoginSuccessfully()
+//        }
     }
 }
