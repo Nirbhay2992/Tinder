@@ -14,14 +14,8 @@ class StartViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        var identifier:String
-        if(!UserManager.shared.isBasicDetailFilled()){
-             identifier = Segue.segueToGenderSelectionFromStart
-            
-        }else{
-             identifier = UserManager.shared.isSessionExpired() ? Segue.segueToLoginFromStart : Segue.segueToDashboardFromStart
-        }
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
+        let identifier = UserManager.shared.isSessionExpired() ? Segue.segueToLoginFromStart : Segue.segueToDashboardFromStart
         performSegue(withIdentifier: identifier, sender: nil)
     }
     
