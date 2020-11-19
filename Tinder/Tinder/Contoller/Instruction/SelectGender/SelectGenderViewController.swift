@@ -25,8 +25,8 @@ class SelectGenderViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        prepareView()
         dataBindingFromViewModel()
+        prepareView()
     }
     
     
@@ -114,6 +114,5 @@ extension SelectGenderViewController : UIViewControllerPrepareView{
         addBorder(width: 1.0, color: #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1), views: [manButton,womanButton,otherButton])
         
         continueButton.isEnabled = viewModel.isGenderChoosen()
-        
     }
 }

@@ -715,7 +715,7 @@
                     <connections>
                         <segue destination="cQK-Be-SGL" kind="show" identifier="segueToDashboardFromStart" id="4XD-9N-f5l"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segueToLoginFromStart" id="kbV-Yt-SYv"/>
-                        <segue destination="Xb4-kF-MnD" kind="show" id="fv2-uU-ejp"/>
+                        <segue destination="Xb4-kF-MnD" kind="show" identifier="segueToGenderSelectionFromStart" id="fv2-uU-ejp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aw-hI-kyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1230,7 +1230,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VOV-QG-N92"/>
+        <segue reference="4XD-9N-f5l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backButtonIcon" width="16" height="16"/>
