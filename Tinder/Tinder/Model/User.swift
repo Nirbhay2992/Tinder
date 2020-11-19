@@ -9,15 +9,55 @@
 import Foundation
 
 
+
+// MARK: - BaseModal
+
+struct BaseResponse<T:Codable> :Codable {
+    let status:Int?
+    let message:String?
+    var result:T?
+    
+    enum CodingKeys: String, CodingKey {
+        case status = "CODE"
+        case message = "MESSAGE"
+        case result = "RESULT"
+    }
+}
+
+struct LoginResponse : Codable{
+    var emailID:String?
+    enum CodingKeys: String, CodingKey {
+        case emailID = "email"
+    }
+}
+
 struct User:Codable{
     var name:String?
-    var is_silhouette:Bool?
-    var id:String?
+    var deviceId:String?
+    var id:String?            // id represent the social media id
     var emailID:String?
     var profilePhotoUrl:String?
-    var loginSource:String? // Facebook/Google
-    var userLogout:Bool?
+    var loginSource:Int? // Facebook/Google
+    
+    init(name:String?, id:String?, email:String?,profilePhotoUrl:String?,loginSource:Int?) {
+        self.name = name
+        self.id = id
+        self.deviceId = id
+        self.emailID = email
+        self.profilePhotoUrl = profilePhotoUrl
+        self.loginSource = loginSource
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case id = "social_id"
+        case emailID = "email"
+        case profilePhotoUrl
+        case deviceId = "device_id"
+        case loginSource = "login_type"
+    }
 }
+
 
 extension User : Hashable{
     func hash(into hasher: inout Hasher){
@@ -65,13 +105,19 @@ struct UserManager {
     }
     
     // Login Session
+    
     public func isSessionExpired()->Bool{
-        let user:User? =  getUserFromUserDefault()
-        return user?.userLogout ?? true
+        //let user:User? =  getUserFromUserDefault()
+        //TODO:- Manage the user session
+        return false
+    }
+    
+    public func isBasicDetailFilled()->Bool{
+        return true
     }
     
     public func getNewUser()->User{
-        let loggedInUser = User.init(name: String(), is_silhouette: Bool(), id: String(), emailID: String(), profilePhotoUrl: String(), loginSource:LoginSource.unknown.getRawValue(), userLogout: false)
+        let loggedInUser = User.init(name: String(), id: String(), email: String(), profilePhotoUrl: String(), loginSource:SocialMediaSource.unknown.rawValue)
         return loggedInUser
     }
 }

@@ -15,11 +15,13 @@ class DashboardViewController: BaseViewController {
     @IBOutlet weak var suggestionButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
     @IBOutlet weak var nearByFriendButton: UIButton!
-    
+    @IBOutlet weak var tagBarButtonItem: UIBarButtonItem!
+
     @IBOutlet weak var suggestionContainerView: UIView!
     @IBOutlet weak var chatContainerView: UIView!
     @IBOutlet weak var profileContainerView: UIView!
     @IBOutlet weak var nearByFriendsView: UIView!
+    @IBOutlet weak var tagContainerView: UIView!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var suggestionImageView: UIImageView!
@@ -33,7 +35,6 @@ class DashboardViewController: BaseViewController {
         renderUI()
         show(container: profileContainerView, icon: profileImageView)
         navigationController?.setNavigationBarHidden(false, animated: true)
-
     }
     
     // MARK:- Button Action
@@ -52,6 +53,12 @@ class DashboardViewController: BaseViewController {
     @IBAction func didNearByFriendButtonTouch(_ sender: Any) {
         show(container: nearByFriendsView, icon: nearByFriendsImageView)
     }
+    
+    @IBAction func didTagButtonTouch(_ sender: UIBarButtonItem) {
+        show(container: tagContainerView, icon: nil)
+        sender.tintColor = #colorLiteral(red: 0.9803921569, green: 0.1960784314, blue: 0.3529411765, alpha: 1)
+    }
+    
 }
 
 private extension DashboardViewController{
@@ -60,7 +67,7 @@ private extension DashboardViewController{
      Render UI
      */
     private func renderUI() {
-        view.setDefaultBackgroundColor()
+        //view.setDefaultBackgroundColor()
     }
     
     private func hideAllContainer() {
@@ -68,15 +75,22 @@ private extension DashboardViewController{
         chatContainerView.isHidden = true
         profileContainerView.isHidden = true
         nearByFriendsView.isHidden = true
+        tagContainerView.isHidden = true
+        
         profileImageView.tintColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
         suggestionImageView.tintColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
         chatImageView.tintColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
         nearByFriendsImageView.tintColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
+        tagBarButtonItem.tintColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
     }
     
-    private func show(container:UIView, icon:UIImageView) {
+    private func show(container:UIView, icon:UIImageView?) {
         hideAllContainer()
+        show(container: container)
+        icon?.tintColor = #colorLiteral(red: 0.9803921569, green: 0.1960784314, blue: 0.3529411765, alpha: 1)
+    }
+    
+    private func show(container:UIView){
         container.isHidden = false
-        icon.tintColor = #colorLiteral(red: 0.9803921569, green: 0.1960784314, blue: 0.3529411765, alpha: 1)
     }
 }

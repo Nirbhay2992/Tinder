@@ -12,6 +12,7 @@ struct Segue {
     static let segueToDashboardFromLogin = "segueToDashboardFromLogin"
     static let segueToDashboardFromStart = "segueToDashboardFromStart"
     static let segueToLoginFromStart = "segueToLoginFromStart"
+    static let segueToGenderSelectionFromStart = "segueToGenderSelectionFromStart"
 }
 
 

@@ -13,6 +13,13 @@
 		1C2AAEFA255FD26900CAACF1 /* UIViewControllerPrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */; };
 		1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */; };
 		1C2AAF04255FF08700CAACF1 /* SelectGenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */; };
+		1C2D78C62564EBEE00CE0BC7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */; };
+		1C704F70256220FB003CE8FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C704F6F256220FB003CE8FE /* CoreLocation.framework */; };
+		1C704F74256287A9003CE8FE /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F73256287A9003CE8FE /* TagViewController.swift */; };
+		1C704F7925628948003CE8FE /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F7825628948003CE8FE /* TagTableViewCell.swift */; };
+		1C704F7D2562B5FD003CE8FE /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */; };
+		1C720F392563897D000672F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C720F382563897D000672F9 /* APIManager.swift */; };
+		1C720F3C256389A5000672F9 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C720F3B256389A5000672F9 /* BaseURL.swift */; };
 		1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */; };
 		1CA2BBC825612F7C004B552B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA2BBC725612F7C004B552B /* Photos.framework */; };
 		1CA2BBCB25613025004B552B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2BBCA25613025004B552B /* ProfileViewModel.swift */; };
@@ -62,6 +69,13 @@
 		1C2AAEF9255FD26900CAACF1 /* UIViewControllerPrepareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPrepareView.swift; sourceTree = "<group>"; };
 		1C2AAEFE255FEC3B00CAACF1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		1C2AAF03255FF08700CAACF1 /* SelectGenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenderViewModel.swift; sourceTree = "<group>"; };
+		1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1C704F6F256220FB003CE8FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1C704F73256287A9003CE8FE /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		1C704F7825628948003CE8FE /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
+		1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
+		1C720F382563897D000672F9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1C720F3B256389A5000672F9 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		1CA2BBC42561213A004B552B /* NearByFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByFriendsViewController.swift; sourceTree = "<group>"; };
 		1CA2BBC725612F7C004B552B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1CA2BBCA25613025004B552B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +125,7 @@
 				C34F68DA24E4F23F008E2355 /* FacebookShare in Frameworks */,
 				C34F68DC24E4F23F008E2355 /* FacebookCore in Frameworks */,
 				74E65E325C4CA031374DE494 /* Pods_Tinder.framework in Frameworks */,
+				1C704F70256220FB003CE8FE /* CoreLocation.framework in Frameworks */,
 				C34F68DE24E4F23F008E2355 /* FacebookGamingServices in Frameworks */,
 				1CA2BBC825612F7C004B552B /* Photos.framework in Frameworks */,
 			);
@@ -122,6 +137,9 @@
 		1C2AAEEB255F917B00CAACF1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1C720F372563895F000672F9 /* API Manager */,
+				1C704F7B2562B5ED003CE8FE /* Social Login */,
+				1C704F7625628912003CE8FE /* TableViewCells */,
 				1C2AAEFD255FEC2A00CAACF1 /* Profiles */,
 				1C2AAEF8255FD24D00CAACF1 /* Protocols */,
 				1C2AAEF7255FD24000CAACF1 /* LocationManager */,
@@ -171,6 +189,40 @@
 			path = SelectGender;
 			sourceTree = "<group>";
 		};
+		1C704F722562878C003CE8FE /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				1C704F73256287A9003CE8FE /* TagViewController.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		1C704F7625628912003CE8FE /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1C704F7825628948003CE8FE /* TagTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		1C704F7B2562B5ED003CE8FE /* Social Login */ = {
+			isa = PBXGroup;
+			children = (
+				1C704F7C2562B5FD003CE8FE /* SocialLogin.swift */,
+			);
+			path = "Social Login";
+			sourceTree = "<group>";
+		};
+		1C720F372563895F000672F9 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1C720F382563897D000672F9 /* APIManager.swift */,
+				1C720F3B256389A5000672F9 /* BaseURL.swift */,
+				1C2D78C52564EBEE00CE0BC7 /* APIClient.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
 		1CA2BBC32561210C004B552B /* NearByFriends */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +254,7 @@
 		87E646A5F6A9CAB29AAF96DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C704F6F256220FB003CE8FE /* CoreLocation.framework */,
 				1CA2BBC725612F7C004B552B /* Photos.framework */,
 				22B1AE3BC39EB8F679A78B81 /* Pods_Tinder.framework */,
 			);
@@ -275,6 +328,7 @@
 		C34F68E924E56857008E2355 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				1C704F722562878C003CE8FE /* Tag */,
 				1CA2BBC32561210C004B552B /* NearByFriends */,
 				1C2AAEF0255FBBC500CAACF1 /* Instruction */,
 				C317015024E6925400922F2E /* Chat */,
@@ -502,6 +556,7 @@
 				C3B125F324E431770011EDE7 /* LoginViewController.swift in Sources */,
 				1C2AAEF5255FBC5900CAACF1 /* SelectGenderViewController.swift in Sources */,
 				C317016624E8F9B400922F2E /* EditInfoViewModel.swift in Sources */,
+				1C720F3C256389A5000672F9 /* BaseURL.swift in Sources */,
 				1CA2BBC52561213A004B552B /* NearByFriendsViewController.swift in Sources */,
 				C317015F24E7E11700922F2E /* ImageViewExtension.swift in Sources */,
 				C3B125F024E431410011EDE7 /* BaseViewController.swift in Sources */,
@@ -522,6 +577,7 @@
 				1C2AAEFF255FEC3B00CAACF1 /* UserProfile.swift in Sources */,
 				1CA2BBD1256167D8004B552B /* NearByFriendViewModel.swift in Sources */,
 				C3B125D824E42E910011EDE7 /* AppDelegate.swift in Sources */,
+				1C704F7925628948003CE8FE /* TagTableViewCell.swift in Sources */,
 				C317015624E6928500922F2E /* ChatViewController.swift in Sources */,
 				C34F68E624E55D56008E2355 /* DashboardViewController.swift in Sources */,
 				C317015D24E7C82200922F2E /* CarouselItem.swift in Sources */,
@@ -530,8 +586,12 @@
 				1C2AAEF2255FBBE600CAACF1 /* InstructionViewController.swift in Sources */,
 				1C2AAEED255F918F00CAACF1 /* LocationManager.swift in Sources */,
 				C317015224E6926700922F2E /* ProfileViewController.swift in Sources */,
+				1C704F7D2562B5FD003CE8FE /* SocialLogin.swift in Sources */,
+				1C704F74256287A9003CE8FE /* TagViewController.swift in Sources */,
+				1C720F392563897D000672F9 /* APIManager.swift in Sources */,
 				C3B125F524E431C60011EDE7 /* LoginViewModel.swift in Sources */,
 				C317014B24E6434300922F2E /* ViewExtension.swift in Sources */,
+				1C2D78C62564EBEE00CE0BC7 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
