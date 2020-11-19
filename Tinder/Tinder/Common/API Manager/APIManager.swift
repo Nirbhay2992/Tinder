@@ -47,6 +47,8 @@ final class APIManager: APIClient {
             
         }
 
+
+
         //TODO:- To call generic method and perfom the fetch operation
         return
         let _ = session.dataTask(with: request) { (data,response,error) in

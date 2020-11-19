@@ -109,7 +109,7 @@ struct UserManager {
     public func isSessionExpired()->Bool{
         //let user:User? =  getUserFromUserDefault()
         //TODO:- Manage the user session
-        return false
+        return true
     }
     
     public func isBasicDetailFilled()->Bool{
